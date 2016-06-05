@@ -86,7 +86,11 @@ module.exports = {
     ]
     assertEquals(result, expected)
   },
-  haltAtVisited: function () { }
+  uniqVisited: function () {
+    sample.loop = { uhOh: sample }
+
+    var result = _.filterDeep(sample, ['color', 'red'])
+  }
 }
 
 assertEquals = function (actual, expected) {
@@ -94,7 +98,7 @@ assertEquals = function (actual, expected) {
     assert.deepStrictEqual(actual, expected)
   } catch (e) {
     console.error("Comparison failed!")
-    console.error('actual:', result)
+    console.error('actual:', actual)
     console.error('---------')
     console.error('expected:', expected)
     console.error('---------')
