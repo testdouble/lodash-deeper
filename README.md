@@ -1,5 +1,7 @@
 # lodash-deeper
 
+![we-need-to-go-deeper](https://cloud.githubusercontent.com/assets/79303/15808608/b2cfdbb8-2b7b-11e6-82f1-d56aaeb39e19.jpg)
+
 I seem to run into cases where I need to do recursive stuff in lodash in ways
 not supported by either lodash or lodash-deep. Just dropping them here so I don't
 keep reinventing them.
