@@ -8,10 +8,10 @@ module.exports = {
   }
 }
 
-function deeplyFilters(collection, predicate, visited) {
+function deeplyFilters (collection, predicate, visited) {
   if (_.isObject(collection)) {
     return _.filter(collection, predicate).concat(_.flatMap(collection, function (val) {
-      if(notYetTraversed(val, visited)) {
+      if (notYetTraversed(val, visited)) {
         return deeplyFilters(val, predicate, visited.concat(collection))
       } else {
         return []

@@ -82,7 +82,7 @@ module.exports = {
       {
         id: 6,
         color: 'red'
-      },
+      }
     ]
     assertEquals(result, expected)
   },
@@ -90,14 +90,46 @@ module.exports = {
     sample.loop = { uhOh: sample }
 
     var result = _.filterDeep(sample, ['color', 'red'])
+
+    var expected = [
+      sample,
+      {
+        id: 2,
+        color: 'red'
+      },
+      {
+        id: 3,
+        color: 'red'
+      },
+      {
+        id: 4,
+        color: 'red',
+        sub: [
+          {
+            id: 5,
+            color: 'red'
+          }
+        ]
+      },
+      {
+        id: 5,
+        color: 'red'
+      },
+      {
+        id: 6,
+        color: 'red'
+      },
+      sample
+    ]
+    assertEquals(result, expected)
   }
 }
 
-assertEquals = function (actual, expected) {
+function assertEquals (actual, expected) {
   try {
     assert.deepStrictEqual(actual, expected)
   } catch (e) {
-    console.error("Comparison failed!")
+    console.error('Comparison failed!')
     console.error('actual:', actual)
     console.error('---------')
     console.error('expected:', expected)
