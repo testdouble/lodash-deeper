@@ -1,0 +1,33 @@
+{
+  "name": "lodash-deeper",
+  "version": "1.0.0",
+  "description": "some lodash mixins for deep operations on plain objects",
+  "main": "index.js",
+  "scripts": {
+    "test": "teenytest *.test.js",
+    "style": "standard",
+    "ci": "npm test && npm run style"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/testdouble/lodash-deeper.git"
+  },
+  "keywords": [
+    "lodash",
+    "deep",
+    "filter"
+  ],
+  "author": "Justin Searls <searls@gmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/testdouble/lodash-deeper/issues"
+  },
+  "homepage": "https://github.com/testdouble/lodash-deeper#readme",
+  "dependencies": {
+    "lodash": ">=4.13.1"
+  },
+  "devDependencies": {
+    "standard": "^7.1.2",
+    "teenytest": "^4.0.0"
+  }
+}
