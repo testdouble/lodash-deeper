@@ -1,4 +1,5 @@
 var lodash = require('../index')
+var lodashCore = require('../lodash-core')
 var assertEquals = require('./support/assert-equals')
 var nestedFilteredPair = require('./support/generate-nested-and-expected-filtered-object-pair')
 
@@ -29,6 +30,15 @@ module.exports = {
     beforeEach: function () {
       _ = lodash
       predicate = ['color', 'red']
+    }
+  , test: tests
+  },
+  withLodashCore: {
+    beforeEach: function () {
+      _ = lodashCore
+      predicate = function (object) {
+        return object.color === 'red'
+      }
     }
   , test: tests
   }
