@@ -17,7 +17,7 @@ var tests = {
   uniqVisited: function () {
     sample.loop = { uhOh: sample }
     expected.push(sample)
-    var result = _.filterDeep(sample, ['color', 'red'])
+    var result = _.filterDeep(sample, predicate)
     assertEquals(result, expected)
   }
 }
