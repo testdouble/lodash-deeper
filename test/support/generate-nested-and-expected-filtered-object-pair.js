@@ -1,39 +1,4 @@
-var assert = require('assert')
-
-var _ = require('./index')
-
-var sample
-var expected
-module.exports = {
-  beforeEach: function () {
-    var pair = nestedFilteredPair()
-    sample = pair.nestedObject
-    expected = pair.filterResult
-  },
-  filtersStuff: function () {
-    var result = _.filterDeep(sample, ['color', 'red'])
-    assertEquals(result, expected)
-  },
-  uniqVisited: function () {
-    sample.loop = { uhOh: sample }
-    expected.push(sample)
-    var result = _.filterDeep(sample, ['color', 'red'])
-    assertEquals(result, expected)
-  }
-}
-
-function assertEquals (actual, expected) {
-  try {
-    assert.deepStrictEqual(actual, expected)
-  } catch (e) {
-    console.error('Comparison failed!')
-    console.error('actual:', actual)
-    console.error('---------')
-    console.error('expected:', expected)
-    console.error('---------')
-    throw e
-  }
-}
+module.exports = nestedFilteredPair
 
 function nestedFilteredPair () {
   var nested = {

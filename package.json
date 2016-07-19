@@ -4,7 +4,7 @@
   "description": "some lodash mixins for deep operations on plain objects",
   "main": "index.js",
   "scripts": {
-    "test": "teenytest *.test.js",
+    "test": "teenytest test/*test.js",
     "style": "standard",
     "ci": "npm test && npm run style"
   },
