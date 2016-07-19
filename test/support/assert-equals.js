@@ -1,8 +1,6 @@
 var assert = require('core-assert')
 
-module.exports = assertEquals
-
-function assertEquals (actual, expected) {
+module.exports = function assertEquals (actual, expected) {
   try {
     assert.deepStrictEqual(actual, expected)
   } catch (e) {
