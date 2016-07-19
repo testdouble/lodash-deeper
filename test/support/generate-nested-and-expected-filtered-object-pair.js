@@ -58,7 +58,7 @@ function nestedFilteredPair () {
   ]
 
   return {
-    nestedObject: nested
-  , filterResult: filtered
+    nestedObject: nested,
+    filterResult: filtered
   }
 }

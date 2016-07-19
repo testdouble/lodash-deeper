@@ -30,8 +30,8 @@ module.exports = {
     beforeEach: function () {
       _ = lodash
       predicate = ['color', 'red']
-    }
-  , test: tests
+    },
+    test: tests
   },
   withLodashCore: {
     beforeEach: function () {
@@ -39,7 +39,7 @@ module.exports = {
       predicate = function (object) {
         return object.color === 'red'
       }
-    }
-  , test: tests
+    },
+    test: tests
   }
 }
