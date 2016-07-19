@@ -1,6 +1,6 @@
 {
   "name": "lodash-deeper",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "some lodash mixins for deep operations on plain objects",
   "main": "index.js",
   "scripts": {
