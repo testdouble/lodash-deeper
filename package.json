@@ -4,9 +4,10 @@
   "description": "some lodash mixins for deep operations on plain objects",
   "main": "index.js",
   "scripts": {
-    "test": "teenytest test/*test.js",
+    "test": "teenytest index.test.js --helper test/support/lodash-helper.js",
+    "test:core": "teenytest index.test.js --helper test/support/lodash-core-helper.js",
     "style": "standard",
-    "ci": "npm test && npm run style"
+    "ci": "npm test && npm run test:core && npm run style"
   },
   "repository": {
     "type": "git",
